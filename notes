@@ -1,0 +1,37 @@
+if you want to create venv in python 
+  go to the dir whare you want and use the command
+  python3 -m venv ./venv
+if you want to activate it 
+  you can use 
+  source ./venv/bin/activate
+if you want to deactivate it 
+  you can use
+  deactivate 
+now we need to install django in our venv
+  pip install django
+start your project
+  django-admin startproject (project_name)
+** manage.py we never touch this file beacause we will use it instead of django-admin
+you need to init a git repo
+  git init 
+you can create your .gitignore file by using 'gitignore.io'
+  and then
+  git add . && git commit -m 'initial commit'
+now run our srever
+  python manage.py runserver
+our first app in this project is pages app 
+** this for any static page
+   python manage.py startapp pages
+after creating the static folder and all the required pathes in the setting.py file
+** you need to run the 
+   python manage.py collectstatic
+** and the static file to .gitignore 
+the linking in django 
+   {% url 'index' %}
+** the editing of highlight pages
+   {% if '/' == request.path %}
+                  class="nav-item active mr-3"
+             {% else %}
+                  class="nav-item mr-3" 
+             {%endif%}
+** you should go and see settings.py to see DATABASE section for new edit for postgresql database
